@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmyblog=self.webpackChunkmyblog||[]).push([[304],{304:(e,n,r)=>{r.r(n),r.d(n,{default:()=>u});var s=r(893),t=r(327);const u=function(){var e=(0,t.$)(),n=e.t;return e.i18n,(0,s.jsx)("div",{children:n("Главная страница")},void 0)}}}]);
