@@ -31,8 +31,9 @@ module.exports = {
     'react/jsx-indent': [2, 2], // Определяет отступы для элементов JSX (2 пробела)
     'react/jsx-indent-props': [2, 2], // Определяет отступы для пропсов в JSX (2 пробела)
     indent: [2, 2], // Основное правило отступов (2 пробела для всего кода)
-    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
-    // Разрешает использование JSX в этих расширениях файлов
+    'react/jsx-filename-extension': [2,
+      { extensions: ['.js', '.jsx', '.tsx'] },
+    ], // Разрешает использование JSX в этих расширениях файлов
     'import/no-unresolved': 'off', // Отключает проверку на правильность импортов
     'import/prefer-default-export': 'off', // Отключает правило, требующее использования `default` экспорта
     'no-unused-vars': 'warn', // Выдает предупреждение при наличии неиспользуемых переменных
@@ -45,6 +46,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off', // Отключает проверку на наличие неиспользуемых зависимостей
     'no-underscore-dangle': 'off', // Отключает правило, которое запрещает использование подчеркивания в именах переменных
     'i18next/no-literal-string': ['error', { markupOnly: true }], // Требует избегать строковых литералов для локализации (только для разметки, например, в JSX)
+    'max-len': ['error', { ignoreComments: true }],
   },
   // Глобальные переменные, которые будут доступны в проекте
   globals: {
