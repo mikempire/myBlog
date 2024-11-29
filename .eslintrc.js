@@ -3,6 +3,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   // Расширения конфигураций для использования общих правил
   extends: [
@@ -30,7 +31,8 @@ module.exports = {
     'react/jsx-indent': [2, 2], // Определяет отступы для элементов JSX (2 пробела)
     'react/jsx-indent-props': [2, 2], // Определяет отступы для пропсов в JSX (2 пробела)
     indent: [2, 2], // Основное правило отступов (2 пробела для всего кода)
-    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }], // Разрешает использование JSX в этих расширениях файлов
+    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+    // Разрешает использование JSX в этих расширениях файлов
     'import/no-unresolved': 'off', // Отключает проверку на правильность импортов
     'import/prefer-default-export': 'off', // Отключает правило, требующее использования `default` экспорта
     'no-unused-vars': 'warn', // Выдает предупреждение при наличии неиспользуемых переменных
@@ -48,4 +50,5 @@ module.exports = {
   globals: {
     __IS_DEV__: true, // Переменная, которая указывает, что приложение в режиме разработки
   },
+
 };
