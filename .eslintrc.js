@@ -45,12 +45,22 @@ module.exports = {
     'import/extensions': 'off', // Отключает требование на указание расширений файлов при импорте
     'import/no-extraneous-dependencies': 'off', // Отключает проверку на наличие неиспользуемых зависимостей
     'no-underscore-dangle': 'off', // Отключает правило, которое запрещает использование подчеркивания в именах переменных
-    'i18next/no-literal-string': ['error', { markupOnly: true }], // Требует избегать строковых литералов для локализации (только для разметки, например, в JSX)
-    'max-len': ['error', { ignoreComments: true }],
+    'i18next/no-literal-string': ['error', {
+      markupOnly: true,
+      ignoreAttribute: ['data-testid'],
+    }], // Требует избегать строковых литералов для локализации (только для разметки, например, в JSX)
+    'max-len': ['error', { ignoreComments: true, code: 100 }],
   },
   // Глобальные переменные, которые будут доступны в проекте
   globals: {
     __IS_DEV__: true, // Переменная, которая указывает, что приложение в режиме разработки
   },
-
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
+  ],
 };
