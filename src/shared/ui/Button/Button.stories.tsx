@@ -1,5 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Theme } from 'app/providers/ThemeProvider';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Button, ThemeButton } from './Button';
 
 export default {
@@ -17,7 +19,7 @@ export const Primary = Template.bind({});
 Primary.args = {
   children: 'Text',
 };
-
+Primary.decorators = [ThemeDecorator(Theme.DARK)];
 export const Clear = Template.bind({});
 Clear.args = {
   children: 'Text',
