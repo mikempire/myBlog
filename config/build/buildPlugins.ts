@@ -1,8 +1,8 @@
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildPaths } from './types/config';
-import { BundleAnalyzerPlugin  } from 'webpack-bundle-analyzer';
 
 export function buildPlugins(
   paths: BuildPaths,

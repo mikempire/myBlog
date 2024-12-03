@@ -1,7 +1,7 @@
-import {render} from "@testing-library/react";
-import {I18nextProvider} from "react-i18next";
-import i18n from "shared/config/i18n/18nTesing";
-import {ReactNode} from "react";
+import { render } from '@testing-library/react';
+import { I18nextProvider } from 'react-i18next';
+import i18n from 'shared/config/i18n/18nTesing';
+import { ReactNode } from 'react';
 
 export function renderWithTranslation(component: ReactNode) {
   return render(
@@ -9,6 +9,6 @@ export function renderWithTranslation(component: ReactNode) {
       {
         component
       }
-    </I18nextProvider>
-  )
+    </I18nextProvider>,
+  );
 }

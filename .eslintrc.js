@@ -47,7 +47,7 @@ module.exports = {
     'no-underscore-dangle': 'off', // Отключает правило, которое запрещает использование подчеркивания в именах переменных
     'i18next/no-literal-string': ['error', {
       markupOnly: true,
-      ignoreAttribute: ['data-testid'],
+      ignoreAttribute: ['data-testid', 'to'],
     }], // Требует избегать строковых литералов для локализации (только для разметки, например, в JSX)
     'max-len': ['error', { ignoreComments: true, code: 100 }],
   },
