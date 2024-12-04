@@ -11,16 +11,13 @@ jobs:
     strategy:
       matrix:
         node-version: [ 17.x ]
-
         steps:
           - name: Checkout code
             uses: actions/checkout@v2
-
           - name: Staring Node.js ${{ matrix.node-version }}
             uses: actions/setup-node@v1.4.3
             with:
               node-version: ${{matrix.node-version}}
-
           - name: Install dependencies
             run: npm install
           - name: build prod project
