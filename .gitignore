@@ -9,5 +9,6 @@ yarn-error.log*
 .pnp.js
 .idea
 /storybook-static
-
+.loki/report.html
+.loki/report.json
 .vscode/*
