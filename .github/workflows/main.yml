@@ -31,8 +31,8 @@ jobs:
       - name: Lint CSS
         run: npm run lint:scss
       - name: Run unit tests
-        run: npm run test:unit
         if: always()
+        run: npm run test:unit
       - name: Build storybook
         run: npm run storybook:build
         if: always()
