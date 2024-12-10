@@ -25,6 +25,7 @@ module.exports = {
     'react', // Плагин для React, предоставляющий дополнительные правила
     '@typescript-eslint', // Плагин для TypeScript, который добавляет правила специфичные для TypeScript
     'i18next', // Плагин для работы с i18next (правила для международализации)
+    'react-hooks',
   ],
   // Правила, которые будут применяться
   rules: {
@@ -50,16 +51,21 @@ module.exports = {
       ignoreAttribute: ['data-testid', 'to'],
     }], // Требует избегать строковых литералов для локализации (только для разметки, например, в JSX)
     'max-len': ['error', { ignoreComments: true, code: 100 }],
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
   // Глобальные переменные, которые будут доступны в проекте
   globals: {
     __IS_DEV__: true, // Переменная, которая указывает, что приложение в режиме разработки
   },
-  overrides: [
+  overrides: [ // Переопределение правил
     {
-      files: ['**/src/**/*.test.{ts,tsx}'],
+      files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
       rules: {
         'i18next/no-literal-string': 'off',
+        'max-len': 'off',
       },
     },
   ],
